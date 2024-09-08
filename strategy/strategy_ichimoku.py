@@ -250,8 +250,8 @@ class IchimokuStrategy(StrategyInterface):
         """
         stocks_df = data['stocks']
         index_considered = stocks_df.index[:t]  # returns list of dates up to t
-        complete_prices_df = data.get('prices_complete')
-        if not complete_prices_df:
+        complete_prices_df = data.get('prices_complete',pd.DataFrame())
+        if complete_prices_df.empty:
             raise ValueError("Data must contain open, high, low, "
                              "close columns in order to calculate Ichimoku Cloud")
         self._set_market_condition(complete_prices_df, index_considered)
@@ -274,7 +274,7 @@ class MarketCondition():
             stock) for stock in self.stock_list}
 
     def _get_stocks(self) -> list[str]:
-        return data['Symbol'].unique().tolist()
+        return self.data['Symbol'].unique().tolist()
 
     def _get_stock_data(self, stock: str) -> pd.DataFrame:
         return self.data[self.data['Symbol'] == stock].copy().reset_index(drop=True)
