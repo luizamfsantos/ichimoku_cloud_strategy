@@ -22,6 +22,7 @@ def load_data():
     # prices_df = melt_prices_df.pivot_table(
     #     index="Date", columns="Ticker", values="value")
     prices_df = pd.read_parquet(basepath / "BR/prices_ibov.parquet")
+    prices_df = prices_df.ffill().bfill()
     prices_complete_df = pd.read_parquet(basepath / "BR/bovespa_ochl.parquet")
 
     # create a dictionary with data
