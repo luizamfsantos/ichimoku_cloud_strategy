@@ -40,4 +40,4 @@ Kaggle Brazilian Stock Market dataset: https://www.kaggle.com/datasets/andrewmvd
 
 ## Results
 
-Tearsheet can be found in: [tearsheet](Tearsheet Ichimoku Strategy Scaled.pdf)
+Tearsheet can be found in: [tearsheet](Tearsheet%20Ichimoku%20Strategy%20Scaled.pdf)
