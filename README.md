@@ -37,3 +37,7 @@ Finally, the notebook will open a window asking where to save the report. Save i
 ## Additional Data Used
 
 Kaggle Brazilian Stock Market dataset: https://www.kaggle.com/datasets/andrewmvd/brazilian-stock-market
+
+## Results
+
+Tearsheet can be found in: [tearsheet](Tearsheet Ichimoku Strategy Scaled.pdf)
